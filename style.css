@@ -1,0 +1,284 @@
+:root{
+    --primario: #2E3545;
+    --secundario: #FFC329;
+    --blanco: #FFFFFF;
+    --texto-sec: #B0B4BE;
+    --alternativo: #1C1F26;
+    --adicional: #4D90FE;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    scroll-behavior: smooth;
+}
+
+
+.inicio {
+    background-image: url('IMAGE/PORTADA.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 88.5vh;
+    position: relative;
+}
+
+.contenido_titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+}
+
+.titulo {
+    text-transform: uppercase;
+    margin-left: 25px;
+    font-size: 3rem;
+    color: white;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--primario);
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    gap: 4rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--blanco);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+    transition: color 0.5s ease;
+}
+
+nav a:hover {
+    color: var(--secundario);
+}
+
+.about_me {
+    display: flex;
+    align-items: center;
+    width: 100%; 
+    height: 50rem; 
+    border-radius: 10px;
+    gap: 50px; 
+}
+
+.about_me img {
+    width: 25rem; 
+    height: 25rem;
+    border-radius: 50px; 
+    object-fit: cover; 
+}
+
+.info {
+    flex: 1; 
+    padding: 1rem;
+}
+
+.info h2 {
+    margin: 0 0 1rem 0;
+    font-size: 4rem; 
+    color: var(--adicional);
+    font-weight: bold;
+}
+
+.info p {
+    margin: 0.5rem 0; 
+    font-size: 1.3rem; 
+    line-height: 1.4;
+}
+
+.datos{
+    padding-bottom: 1rem;
+}
+
+.experiencia {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 1fr; /* Cambia a dos filas: una para título, otra para las tarjetas */
+    gap: 2rem; /* Espacio entre columnas y filas */
+    width: 100%; 
+    padding: 2rem 0; /* Espaciado arriba y abajo */
+    border-radius: 10px; 
+    padding-top: 80px;
+}
+
+.titulo_exp {
+    grid-column: 1 / -1; /* Ocupa las tres columnas */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--alternativo);
+    color: var(--blanco);
+}
+.exp_ganttdu,
+.exp_hemac,
+.exp_lego {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    height: 35rem;
+}
+
+.experiencia img {
+    width: 15rem;
+    height: 15rem;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 0.5rem;
+    background-color: var(--secundario);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+}
+
+.titulo_exp h2{
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+.experiencia h3{
+    font-size: 30px;
+}
+
+.cont_portafolio{
+    padding-top: 80px;
+    width: 100%;
+}
+
+.titulo_portafolio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--alternativo);
+    color: var(--blanco);
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.portafolio{
+    display: flex;
+    gap: 5px;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    width: 100%;
+    height: 36.2rem;
+}
+
+.portafolio img{
+    scroll-snap-align: center;
+    min-width: 750px;
+    margin: 10px;
+}
+
+.contacto{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 1fr; /* Cambia a dos filas: una para título, otra para las tarjetas */
+    gap: 2rem; /* Espacio entre columnas y filas */
+    width: 100%; 
+    padding: 2rem 0; /* Espaciado arriba y abajo */
+    border-radius: 10px; 
+    padding-top: 80px;
+}
+
+.titulo_contacto {
+    grid-column: 1 / -1; /* Ocupa las tres columnas */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--alternativo);
+    color: var(--blanco);
+}
+
+.titulo_contacto h2{
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+.agradecimiento{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 32.6rem;
+    
+}
+
+.agradecimiento h3{
+    font-size: 25px;
+}
+
+.referencias{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    height: 32.6rem;
+    
+}
+
+.contact_facebook {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.contact_instagram {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.contact_linkedin {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.referencias a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    transition: color 0.5s ease;
+}
+
+.referencias a:hover {
+    color: var(--secundario);
+}
